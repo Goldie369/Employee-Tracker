@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
-    
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Goldie369/Employee-Tracker/issues"
   },
-  "homepage": "https://github.com/Goldie369/Employee-Tracker#readme"
+  "homepage": "https://github.com/Goldie369/Employee-Tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.4",
+    "mysql": "^2.18.1"
+  }
 }
