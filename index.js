@@ -58,3 +58,15 @@ const addEmployeeQuestions = [
     },
 ]
 
+function employeeChoices() {
+    return db.promise().query("SELECT * from employee")
+}
+
+function departmentChoices() {
+    return db.promise().query("SELECT * from department")
+}
+
+function roleChoices() {
+    return db.promise().query("SELECT * from role")
+}
+
