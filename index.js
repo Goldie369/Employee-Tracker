@@ -14,5 +14,31 @@ const firstQuestion = [
     },
 ]
 
+const addDepartmentQuestions = [
+    {
+        type: 'input',
+        name: 'departmentName',
+        message: "What is the name of the department you would like to add?",
+       
+
+    },
+]
+
+const addRoleQuestions = [
+    {
+        type: 'input',
+        name: 'roleName',
+        message: "What is the name of the role you would like to add?",
+        
+
+    },
+    {
+        type: 'input',
+        name: 'roleSalary',
+        message: "What is the salary for this role?",
+        
+
+    },
+]
 
 
