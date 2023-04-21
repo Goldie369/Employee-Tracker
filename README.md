@@ -1,6 +1,6 @@
-# Employee Tracker
+# 🧑‍💼 Employee Tracker 🧑‍💼
 
-[![License][license-shield]][license-url]
+![](https://img.shields.io/badge/license-MIT-blue)
 
 
 ## Description
@@ -17,9 +17,11 @@ This application helps users view and manage a company database. This contains i
     
 * [Usage](#Usage)
     
-* [Contributing](#Contributing)
+* [Resources](#Resources)
     
 * [Questions](#Questions)
+
+* [Credits] (#Questions)
 
 ## Instructions
 
@@ -29,7 +31,7 @@ From there simply follow the prompts to manage your employee database
 
 ## Screenshot
 
-![Screenshot]()
+## ![Screenshot](./Assets/)
 
 
 ## Demo
@@ -39,10 +41,21 @@ From there simply follow the prompts to manage your employee database
 
 
 
-## Contibutions
+## Resources
+
 - [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 - [console.table](https://www.npmjs.com/package/console.table)
 - [Inquirer](https://www.npmjs.com/package/inquirer)
 - [Node.js](https://nodejs.org/en/)
 - [MySQL](https://www.mysql.com/)
 - [YouTube](https://www.youtube.com/watch?v=7T8b7g7aV1A)
+- [Shields.io - license badge](https://shields.io/)
+- [Emoji](https://emojipedia.org/)
+
+## Questions
+    
+If you have any questions regarding this project, please don't hesitate to contact me using my email address: zlatelinarizova@gmail.com. You can find my project repositories here: [Goldie369](https://github.com/Goldie369).
+
+## Credits 
+
+Big Thanks to my tutor Collin Porter [Collin Porter!](https://github.com/portercol) for the help support and help on this assighment.
