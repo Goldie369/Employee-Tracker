@@ -110,3 +110,20 @@ const db = mysql.createConnection(
     console.log(`Connected to the classlist_db database.`)
 );
 
+init()
+
+
+function viewDepartments() {
+    db.query('SELECT * FROM department', function (err, results) {
+        console.table(results);
+        init() 
+    });
+}
+
+
+function viewRoles() {
+    db.query('SELECT * FROM role', function (err, results) {
+        console.table(results);
+        init() 
+    });
+}
