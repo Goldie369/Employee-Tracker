@@ -79,6 +79,11 @@ function roleChoices() {
     return db.promise().query("SELECT * from role")
 }
 
+//-- Adding a function init that serves as the entry point for the command-line application--//
+//-- the inquirer uses package to prompt the user with the firstQuestion array of choices--//
+//-- If the user selects 'View all departments', the viewDepartments function is called--//
+// -- If the user selects 'View all roles', the viewRoles function is called and etc...--//
+
 function init() {
     console.log(greeting)
     inquirer
