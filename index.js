@@ -126,7 +126,11 @@ const db = mysql.createConnection(
 
 init()
 
-
+//-- Adding a  functions that retrieve data from the MySQL database and display it in a formatted table using the console.table()--//
+//-- The viewDepartments() function retrieves all the departments in the department--//
+//-- then calls the init() function to return the user to the main menu--//
+//-- The viewRoles() function retrieves all the roles in the role table using a SQL SELECT statement--//
+//-- The viewEmployees() function retrieves all the employees in the employee table--//
 function viewDepartments() {
     db.query('SELECT * FROM department', function (err, results) {
         console.table(results);
