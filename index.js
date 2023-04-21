@@ -134,3 +134,14 @@ function viewEmployees() {
         init()
     });
 }
+function addDepartment() {
+    inquirer
+        .prompt(addDepartmentQuestions)
+        .then((answer) => {
+            db.query(`INSERT INTO department (id, name)
+        VALUES (id, '${answer.departmentName}');`, function (err, results) {
+                console.log(`Success! You added the ${answer.departmentName} department.`)
+                init()
+            })
+        })
+}
