@@ -172,3 +172,29 @@ function addRole() {
 
         })
 }
+function addEmployee() {
+    inquirer
+        .prompt(addEmployeeQuestions)
+        .then((answers) => {
+            const firstName = answers.firstName
+            const lastName = answers.lastName
+            roleChoices().then(response => {
+                const rChoices = response[0].map(({ id, title }) => ({ name: title, value: id }))
+                inquirer
+                    .prompt([
+                        {
+                            type: 'list',
+                            name: 'newRole',
+                            message: "What will be their role?",
+                            choices: rChoices
+                        },
+                    ]).then((answers) => {
+                        
+                        db.query(`INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?);`, [firstName, lastName, answers.newRole, null], function (err, results) {
+                            console.log("Success! " + firstName + " " + lastName + " has been added to the employee database")
+                            init()
+                        });
+                    })
+            })
+        })
+}
