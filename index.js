@@ -41,4 +41,20 @@ const addRoleQuestions = [
     },
 ]
 
+const addEmployeeQuestions = [
+    {
+        type: 'input',
+        name: 'firstName',
+        message: "For the employee you want to add, what is their first name?",
+        
+
+    },
+    {
+        type: 'input',
+        name: 'lastName',
+        message: "What is their last name?",
+        
+
+    },
+]
 
