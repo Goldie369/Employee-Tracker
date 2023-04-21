@@ -21,7 +21,7 @@ This application helps users view and manage a company database. This contains i
     
 * [Questions](#Questions)
 
-* [Credits] (#Questions)
+* [Credits](#Questions)
 
 ## Instructions
 
@@ -35,6 +35,8 @@ From there simply follow the prompts to manage your employee database
 
 
 ## Demo
+Link to the Video
+
 
 ## Usage
 
