@@ -111,7 +111,7 @@ function init() {
             }
         })
 }
-
+//-- Adding a The createConnection() function takes an object with configuration options for the connection--//
 const db = mysql.createConnection(
     
     {
