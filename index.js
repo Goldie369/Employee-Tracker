@@ -211,3 +211,28 @@ function updateRole() {
                     choices: empChoices
 
                 },
+
+            ])
+            .then((answers) => {
+                
+                const employee = answers.employeeChosen
+                roleChoices().then(response => {
+                    const rChoices = response[0].map(({ id, title }) => ({ name: title, value: id }))
+                    inquirer
+                        .prompt([
+                            {
+                                type: 'list',
+                                name: 'newRole',
+                                message: "What is their new role?",
+                                choices: rChoices
+                            },
+                        ]).then((answers) => {
+                            
+                            db.query("UPDATE employee SET role_id= ? WHERE id= ?", [answers.newRole, employee])
+                            console.log("Success! Role has been updated.")
+                            init()
+                        })
+                })
+            })
+    })
+}
