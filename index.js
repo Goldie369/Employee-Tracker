@@ -163,6 +163,12 @@ function addDepartment() {
             })
         })
 }
+
+//-- Adding a function function that adds a new role to the MySQL database--//
+//-- The addRole() function first prompts the user with a set of questions defined in the addRoleQuestions variable--//
+//-- After the user selects a department, the function constructs a SQL INSERT statement to add the new role to the role table--//
+//-- Adding a function calls the init() function to return the user to the main menu--//
+
 function addRole() {
     inquirer
         .prompt(addRoleQuestions)
@@ -190,6 +196,13 @@ function addRole() {
 
         })
 }
+
+//-- Adding a addEmployee function prompts the user for the employee's first name, last name, and role--//
+//-- First, it uses inquirer.prompt to ask the user for the employee's first name and last name--//
+//-- Then, it calls the roleChoices function to get a list of all available roles--//
+//-- The rChoices variable is an array of choices in the format expected by inquirer.prompt--//
+//-- he function uses a SQL INSERT INTO query to add the new employee to the database, using the firstName, lastName, and answers.newRole--//
+
 function addEmployee() {
     inquirer
         .prompt(addEmployeeQuestions)
