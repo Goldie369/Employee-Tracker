@@ -98,3 +98,15 @@ function init() {
         })
 }
 
+const db = mysql.createConnection(
+    
+    {
+        host: '127.0.0.1',
+        user: 'root',
+        password: 'Password1',
+        database: 'Goldie_db'
+        
+    },
+    console.log(`Connected to the classlist_db database.`)
+);
+
