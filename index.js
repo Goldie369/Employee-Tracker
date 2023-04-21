@@ -145,3 +145,30 @@ function addDepartment() {
             })
         })
 }
+function addRole() {
+    inquirer
+        .prompt(addRoleQuestions)
+        .then((answers) => {
+            const roleTitle = answers.roleName
+            const roleSalary = answers.roleSalary
+            departmentChoices().then(response => {
+                const dChoices = response[0].map(({ id, name }) => ({ name: name, value: id }))
+                inquirer
+                    .prompt([
+                        {
+                            type: 'list',
+                            name: 'roleDepartment',
+                            message: "What is the department in for this role?",
+                            choices: dChoices
+                        },
+                    ]).then((answer) => {
+                        db.query(`INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?);`, [roleTitle, roleSalary, answer.roleDepartment], function (err, results) {
+                            
+                            console.log(`Success! You added the ${roleTitle} role.`)
+                            init()
+                        })
+                    })
+            })
+
+        })
+}
