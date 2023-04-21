@@ -1,10 +1,13 @@
+
+//-- Adding a dependencies--//
 var inquirer = require('inquirer');
 const mysql = require('mysql2');
 const cTable = require('console.table');
 
-
+//-- Connecting the greeting message--//
 const { greeting, color } = require('./Assets/greeting');
 
+//-- Adding a array "firstQuestion" that contains an object with properties defining a single question to ask the user using the inquirer package--//
 const firstQuestion = [
     {
         type: 'list',
@@ -14,6 +17,7 @@ const firstQuestion = [
     },
 ]
 
+//-- Adding a array "addDepartmentQuestions" that contains an object with properties defining a single question to ask the user using the inquirer package--//
 const addDepartmentQuestions = [
     {
         type: 'input',
@@ -57,6 +61,11 @@ const addEmployeeQuestions = [
 
     },
 ]
+//-- Adding a 3 functions that use the mysql2:
+//-- The db.promise() syntax means that the query function will return a promise that can be resolved with .then() or await--//
+//-- employeeChoices() queries the employee table in the database and returns a promise that resolves with the results of the query--//
+//-- departmentChoices() queries the department table in the database and returns a promise that resolves with the results of the query--//
+//-- roleChoices() queries the role table in the database and returns a promise that resolves with the results of the query--//
 
 function employeeChoices() {
     return db.promise().query("SELECT * from employee")
