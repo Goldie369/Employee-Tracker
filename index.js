@@ -70,3 +70,31 @@ function roleChoices() {
     return db.promise().query("SELECT * from role")
 }
 
+function init() {
+    console.log(greeting)
+    inquirer
+        .prompt(firstQuestion)
+        .then((answer) => {
+
+            
+            if (answer.menu === 'View all departments') {
+                viewDepartments()
+            } else if (answer.menu === 'View all roles') {
+                viewRoles()
+            } else if (answer.menu === 'View all employees') {
+                viewEmployees()
+            } else if (answer.menu === 'Add a department') {
+                addDepartment()
+            } else if (answer.menu === 'Add a role') {
+                addRole()
+            } else if (answer.menu === 'Add an employee') {
+                addEmployee()
+            } else if (answer.menu === 'Update an employee role') {
+                updateRole()
+            } else {
+                console.log('Have a nice day!')
+                process.exit()
+            }
+        })
+}
+
