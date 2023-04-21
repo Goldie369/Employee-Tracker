@@ -31,12 +31,12 @@ From there simply follow the prompts to manage your employee database
 
 ## Screenshot
 
-## ![Screenshot](./Assets/)
+## ![Screenshot](./Assets/images/Screen%20Shot%202023-04-20%20at%209.06.03%20PM.png)
 
 
 ## Demo
 Link to the Video
-
+Pending!!!
 
 ## Usage
 
