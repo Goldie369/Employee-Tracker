@@ -198,3 +198,16 @@ function addEmployee() {
             })
         })
 }
+function updateRole() {
+    employeeChoices().then(response => {
+        
+        let empChoices = response[0].map(({ id, first_name, last_name }) => ({ name: `${first_name} ${last_name}`, value: id })) //creates an array 
+        inquirer
+            .prompt([
+                {
+                    type: 'list',
+                    name: 'employeeChosen',
+                    message: "What is the name of the employee for whom you want to update the role?",
+                    choices: empChoices
+
+                },
