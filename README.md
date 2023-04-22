@@ -50,7 +50,7 @@ https://watch.screencastify.com/v/qCFOXLJ11hKGM3uSDpSq
 - [Node.js](https://nodejs.org/en/)
 - [MySQL](https://www.mysql.com/)
 - [YouTube](https://www.youtube.com/watch?v=7T8b7g7aV1A)
-- [YouTube]https://www.youtube.com/watch?v=cG3FBvz3h7w&t=81s
+- [YouTube](https://www.youtube.com/watch?v=cG3FBvz3h7w&t=81s)
 - [Shields.io - license badge](https://shields.io/)
 - [Emoji](https://emojipedia.org/)
 
