@@ -35,8 +35,7 @@ From there simply follow the prompts to manage your employee database
 
 
 ## Demo
-Link to the Video
-Pending!!!
+https://watch.screencastify.com/v/qCFOXLJ11hKGM3uSDpSq
 
 ## Usage
 
