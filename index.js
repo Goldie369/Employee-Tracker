@@ -83,9 +83,9 @@ function roleChoices() {
 //-- the inquirer uses package to prompt the user with the firstQuestion array of choices--//
 //-- If the user selects 'View all departments', the viewDepartments function is called--//
 // -- If the user selects 'View all roles', the viewRoles function is called and etc...--//
-
+console.log(greeting)
 function init() {
-    console.log(greeting)
+    
     inquirer
         .prompt(firstQuestion)
         .then((answer) => {
@@ -133,6 +133,7 @@ init()
 //-- The viewEmployees() function retrieves all the employees in the employee table--//
 function viewDepartments() {
     db.query('SELECT * FROM department', function (err, results) {
+        
         console.table(results);
         init() 
     });
@@ -147,7 +148,8 @@ function viewRoles() {
 }
 
 function viewEmployees() {
-    db.query("SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;", function (err, results) {
+    db.query("SELECT employee.id, employee.first_name, employee.last_name, role.title, department.department_name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;", function (err, results) {
+        console.log(err)
         console.table(results);
         init()
     });

@@ -5,7 +5,7 @@ USE Goldie_db;
 
 CREATE TABLE department (
   id INT AUTO_INCREMENT, 
-  deparment_name VARCHAR(30) NOT NULL,
+  department_name VARCHAR(30) NOT NULL,
   PRIMARY KEY (id)
 );
 
